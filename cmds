@@ -1,0 +1,10 @@
+python -m venv venv
+
+.\venv\Scripts\Activate.ps1 #Windows
+ou
+./venv/bin/activate         #Linux
+
+pip install -r requirements.txt
+
+python manage.py runserver
+
