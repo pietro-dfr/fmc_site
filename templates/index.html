@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMC</title>
+
+    <!-- CSS LOCAL -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- GOOGLE ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img class="FMC" src="{% static 'img/logo_fmc_transparente_2k.png' %}" alt="">
+            <form>
+                <div class="search">
+                    <span class="search-icon material-symbols-outlined">search</span>
+                    <input class="search-input" type="search" placeholder="Search">
+                </div>
+            </form>
+
+            <img id="cart-icon" class="icon" src="{% static 'img/carrinho-de-compras.png' %}" alt="">
+
+            <div id="cart-sidebar" class="cart-sidebar">
+                <div class="cart-header">
+                    <h2>Seu Carrinho</h2>
+                    <button class="close-cart">&times;</button>
+                </div>
+                <div class="cart-items">
+                    <p>Vazio.</p>
+                </div>
+                <div class="cart-footer">
+                    <button class="checkout-btn">Finalizar Compra</button>
+                </div>
+            </div>
+
+            <a class="icon" href="{% url 'login' %}">
+                <img class="icon" src="{% static 'img/do-utilizador.png' %}" alt="">
+            </a>
+    </header>
+
+    <main>
+        <h3>Ferreira Matériais de Construção</h3>
+        <p>Ferreira Materiais de Construção é sinônimo de qualidade, confiança e bom atendimento.
+Tudo o que você precisa para construir ou reformar, em um só lugar.</p>
+
+        <div class="carousel">
+            <div class="group">
+                <div class="card"><img class="card" src="{% static 'img/promo1.jpg' %}" alt=""></div>
+                <div class="card"><img class="card" src="{% static 'img/promo2.jpg' %}" alt=""></div>
+                <div class="card"><img class="card" src="{% static 'img/promo3.jpg' %}" alt=""></div>
+                <div class="card"><img class="card" src="{% static 'img/promo4.jpg' %}" alt=""></div>
+                <div class="card"><img class="card" src="{% static 'img/promo5.jpg' %}" alt=""></div>
+            </div>
+
+            <div aria-hidden class="group">
+                <div class="card"><img class="card" src="{% static 'img/promo1.jpg' %}" alt=""></div>
+                <div class="card"><img class="card" src="{% static 'img/promo2.jpg' %}" alt=""></div>
+                <div class="card"><img class="card" src="{% static 'img/promo3.jpg' %}" alt=""></div>
+                <div class="card"><img class="card" src="{% static 'img/promo4.jpg' %}" alt=""></div>
+                <div class="card"><img class="card" src="{% static 'img/promo5.jpg' %}" alt=""></div>
+            </div>
+        </div>
+
+        <div class="tags">
+            <div class="tag">Tintas</div>
+            <div class="tag">Ferramentas</div>
+            <div class="tag">Encanamentos</div>
+            <div class="tag">Matériais de construção</div>
+        </div>
+
+        <div class="product">
+            <div class="product-itens">
+
+                <!-- 1 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/1img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Torneira mese de lavatorio</p>
+                    <p class="product-price">R$ 65,01</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 2 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/2img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Parafusadeira de impacto</p>
+                    <p class="product-price">R$ 515,99</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 3 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/3img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Torneira flexivel 2 jatos</p>
+                    <p class="product-price">R$ 113,90</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 4 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/4img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Martelete perfurador 127V</p>
+                    <p class="product-price">R$ 985,60</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 5 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/5img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Cimento forte cp 50kg</p>
+                    <p class="product-price">R$ 45,99</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 6 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/6img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Tinta coral fosco branco</p>
+                    <p class="product-price">R$ 327,99</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 7 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/7img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Chuveiro Acqua Storm Ultra</p>
+                    <p class="product-price">R$ 675,59</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 8 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/8img.webp' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Kit Ferramentas 11 peças</p>
+                    <p class="product-price">R$ 22,90</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 9 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/9img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Tinta coral azul clara</p>
+                    <p class="product-price">R$ 327,99</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 10 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/10img.webp' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Tinta coral vermelha</p>
+                    <p class="product-price">R$ 327,99</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 11 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/11img.webp' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Tubo cano marron 20mm</p>
+                    <p class="product-price">R$ 5,60</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 12 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/12img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Tinta Branca</p>
+                    <p class="product-price">R$ 50,00</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 13 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/13img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Banheira Vitoriana</p>
+                    <p class="product-price">R$ 8.821,08</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 14 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/14img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Cimento votoran 25kg</p>
+                    <p class="product-price">R$ 26,99</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 15 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/15img.webp' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Chuveiro ducha eletrônica</p>
+                    <p class="product-price">R$ 250,00</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 16 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/16img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Esmerilhadeira angular 18V</p>
+                    <p class="product-price">R$ 1.290,00</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 17 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/17img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Joelho pvc 50mm x 90°</p>
+                    <p class="product-price">R$ 4,95</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 18 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/18img.png' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Kit Ferramentas tramontina</p>
+                    <p class="product-price">R$ 135,50</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 19 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/19img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Kit motosserra e bateria</p>
+                    <p class="product-price">R$ 4.900,06</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 20 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/20img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Luva de correr 60mm</p>
+                    <p class="product-price">R$ 4,25</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 21 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/21img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Piso de madeira</p>
+                    <p class="product-price">R$ 75,00</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 22 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/22img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Serra Mármore 110mm</p>
+                    <p class="product-price">R$ 447,88</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 23 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/23img.png' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Tee Tubo pvc 3/4 25mm</p>
+                    <p class="product-price">R$ 3,50</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 24 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/24img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Tinta coral branco neve</p>
+                    <p class="product-price">R$ 327,99</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+                <!-- 25 -->
+                <div class="product-card">
+                    <div class="itens"><img src="{% static 'img/25img.jpg' %}" alt="Tinta Azul"></div>
+                    <p class="product-name">Vaso sanitário monobloco</p>
+                    <p class="product-price">R$ 345,00</p>
+                    <button class="add-to-cart">Adicionar</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="{% url 'about' %}">Sobre nós</a> |
+        <a href="https://www.djangoproject.com/">Made with Django &#x2764;</a>
+    </footer>
+
+    <!-- JS -->
+    <script src="{% static 'script.js' %}"></script>
+
+</body>
+</html>

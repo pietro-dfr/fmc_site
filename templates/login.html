@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body class="loginin">
+    <div class="login-container">
+        <a href="{% url 'index' %}" class="close-btn">X</a>
+        <h2>Login</h2>
+        {% csrf_token %}
+        <form action="{% url 'index' %}" method="post">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            </div>
+            {% csrf_token %}
+            <button type="submit">Entrar</button>
+        </form>
+        {% csrf_token %}
+        <a href="{% url 'index' %}" class="forgot-password">Esqueci minha senha</a>
+    </div>
+</body>
+</html>

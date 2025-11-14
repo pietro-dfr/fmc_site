@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOBRE</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <main>
+        <h1>
+            Sobre a Ferreira Materiais de Construção
+        </h1>
+        <p>
+            Fundada com o compromisso de oferecer qualidade, variedade e atendimento de excelência, a Ferreira <br>
+            Materiais de Construção é referência no fornecimento de materiais para obras e reformas. Há [X] anos <br>
+             no mercado, atendemos desde pequenos projetos residenciais até grandes construções comerciais, sempre <br>
+              priorizando produtos confiáveis e duradouros. <br>
+            <br>
+            Nosso objetivo é facilitar a vida de nossos clientes, oferecendo soluções completas para construção, <br>
+             acabamento e reforma, com profissionais capacitados prontos para orientar e atender suas necessidades. <br>
+              Aqui, você encontra não apenas materiais, mas também segurança, confiança e suporte em cada etapa do seu projeto. <br>
+            <br>
+            Ferreira Materiais de Construção: construindo juntos, do alicerce ao acabamento.
+        </p>
+        <a href="{{ maps_link }}" style="display: flex; justify-content: center ;">Localização</a>
+        <a href="{{ maps_link }}"><img class="sobre" src="{% static 'img/FMC.jpg' %}" alt=""></a>
+
+        <p>Ferreira Materiais de Construção - Avenida Marechal Deodoro - Centro, Paulistana - PI</p>
+    </main>
+    <footer>
+        <a href="{% url 'index' %}">Loja</a> |
+        <a href="https://www.djangoproject.com/">Made with Django &#x2764;</a>
+    </footer>
+</body>
+</html>
